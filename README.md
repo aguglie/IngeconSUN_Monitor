@@ -1,2 +1,18 @@
-# IngeconSUN_Monitor
-Docker container to gather informations from Ingecon Sun Photovoltaic Inverter
+# Ingecon Sun Monitor
+Docker container to gather informations from Ingecon Sun photovoltaic Inverter, allowing to retrive them via an HTTP API or push them to a Graphite aggregator.
+
+**Disclaimer:** This project is not affiliated with Ingeteam or Ingecom. It is a independent, unofficial API. Since it's not officially supported it may cause irreversibles damages to your equipment. Use it at your own risk.
+
+**This code was tested on a INGECON SUN Lite TL with RS485 address 1**
+
+### How is it working?
+You'll need a RS485-to-TCP converter in order to connect to the inverter; I've used: [USR-TCP232-304](https://www.usriot.com/products/rs485-to-ethernet-converter.html)
+
+Then you'll just need to clone the project; fill the envs in the _docker-compose.yml_ and run it using:
+
+	docker-compose up -d
+
+
+The data is reachable via HTTP or you can optionally configure it to push the data to a Graphite server.
+
+![Screen](grafana.png?raw=true "Title")

@@ -1,0 +1,14 @@
+version: '2.1'
+
+services:
+  fvimporter:
+    build: ./app
+    container_name: fvimporter
+    environment:
+      - GRAPHITE_ENABLE=true
+      - GRAPHITE_URL=192.168.1.40:2003
+      - BRIDGE_PORT=8090
+      - BRIDGE_ADDR=192.168.1.32
+    restart: always
+    ports:
+      - "3000:3000"
