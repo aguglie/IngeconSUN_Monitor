@@ -17,3 +17,5 @@ Then you'll just need to clone the project; fill the envs in the _docker-compose
 
 The data is reachable via HTTP at _http://localhost:3000_ or you can optionally configure it to push the data to a Graphite server.
 
+#### Example of HTTP Output
+	{"fv.gridVoltage":244,"fv.outputPower":3165,"fv.gridCurrent":12.94,"fv.busVoltage":370,"fv.photovoltaicModuleCurrent":8.53,"fv.photovoltaicModuleVoltage":372,"fv.efficiency": 0.99,"fv.time":1552834163}
